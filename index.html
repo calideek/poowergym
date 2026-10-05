@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Power Gym | Cali Mohamed Nuur</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                POWER<span>GYM</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#bmi">BMI</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </nav>
+    </header>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO POWER GYM</p>
+
+            <h1>
+                BUILD YOUR
+                <span>STRONGER</span>
+                BODY
+            </h1>
+
+            <p>
+                Train hard. Stay strong. Become the best version
+                of yourself with Power Gym.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#plans" class="btn">JOIN NOW</a>
+                <a href="#services" class="btn btn-outline">
+                    OUR SERVICES
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+
+        <div class="section-title">
+            <p>WHO WE ARE</p>
+            <h2>ABOUT <span>POWER GYM</span></h2>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-box">
+                <div class="about-icon">🏋️</div>
+                <h3>Modern Equipment</h3>
+                <p>
+                    We provide quality equipment to help you
+                    train safely and effectively.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <div class="about-icon">💪</div>
+                <h3>Professional Trainers</h3>
+                <p>
+                    Our trainers help you create the right
+                    workout plan for your goals.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <div class="about-icon">🔥</div>
+                <h3>Strong Community</h3>
+                <p>
+                    Train with motivated people and stay
+                    focused on your fitness journey.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="section dark-section" id="services">
+
+        <div class="section-title">
+            <p>WHAT WE OFFER</p>
+            <h2>OUR <span>SERVICES</span></h2>
+        </div>
+
+        <div class="services-container">
+
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <h3>Weight Training</h3>
+                <p>
+                    Build muscle and increase your strength
+                    with professional weight training.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <h3>Cardio Training</h3>
+                <p>
+                    Improve your fitness, endurance and
+                    cardiovascular health.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <h3>Personal Training</h3>
+                <p>
+                    Get a personalized workout program
+                    designed for your specific goals.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMBERSHIP PLANS -->
+    <section class="section" id="plans">
+
+        <div class="section-title">
+            <p>CHOOSE YOUR PLAN</p>
+            <h2>MEMBERSHIP <span>PLANS</span></h2>
+        </div>
+
+        <div class="plans-container">
+
+            <div class="plan-card">
+
+                <h3>STARTER</h3>
+
+                <div class="price">
+                    $15 <small>/ Month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Gym Access</li>
+                    <li>✓ Cardio Area</li>
+                    <li>✓ Locker Room</li>
+                    <li>✕ Personal Trainer</li>
+                </ul>
+
+                <button onclick="selectPlan('Starter')">
+                    CHOOSE PLAN
+                </button>
+
+            </div>
+
+
+            <div class="plan-card popular">
+
+                <div class="popular-text">POPULAR</div>
+
+                <h3>PRO</h3>
+
+                <div class="price">
+                    $30 <small>/ Month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Full Gym Access</li>
+                    <li>✓ Cardio Area</li>
+                    <li>✓ Locker Room</li>
+                    <li>✓ Personal Trainer</li>
+                </ul>
+
+                <button onclick="selectPlan('Pro')">
+                    CHOOSE PLAN
+                </button>
+
+            </div>
+
+
+            <div class="plan-card">
+
+                <h3>ELITE</h3>
+
+                <div class="price">
+                    $50 <small>/ Month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Full Gym Access</li>
+                    <li>✓ All Training Areas</li>
+                    <li>✓ Nutrition Plan</li>
+                    <li>✓ Personal Trainer</li>
+                </ul>
+
+                <button onclick="selectPlan('Elite')">
+                    CHOOSE PLAN
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BMI CALCULATOR -->
+    <section class="bmi-section" id="bmi">
+
+        <div class="bmi-container">
+
+            <div>
+
+                <p class="small-title">FITNESS TOOL</p>
+
+                <h2>BMI <span>CALCULATOR</span></h2>
+
+                <p>
+                    Enter your weight and height to calculate
+                    your Body Mass Index.
+                </p>
+
+            </div>
+
+
+            <div class="bmi-box">
+
+                <input
+                    type="number"
+                    id="weight"
+                    placeholder="Weight (kg)"
+                >
+
+                <input
+                    type="number"
+                    id="height"
+                    placeholder="Height (cm)"
+                >
+
+                <button onclick="calculateBMI()">
+                    CALCULATE BMI
+                </button>
+
+                <div id="bmiResult"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+
+        <div class="section-title">
+            <p>GET IN TOUCH</p>
+            <h2>CONTACT <span>US</span></h2>
+        </div>
+
+        <div class="contact-container">
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                ></textarea>
+
+                <button type="submit">
+                    SEND MESSAGE
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+
+            <!-- YOUR INFORMATION -->
+            <div class="contact-info">
+
+                <h3>Cali Maxamed Nuur</h3>
+
+                <p>📍 Hodan, Mogadishu, Somalia</p>
+
+                <p>📞 0167236652</p>
+
+                <p>💪 Power Gym</p>
+
+                <p>
+                    🕐 Monday - Sunday
+                    <br>
+                    5:00 AM - 11:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT DEVELOPER -->
+    <section class="developer-section">
+
+        <div class="developer-box">
+
+            <p class="small-title">WEBSITE DEVELOPER</p>
+
+            <h2>
+                Cali <span>Maxamed Nuur</span>
+            </h2>
+
+            <p>
+                This website was designed and developed
+                by Cali Maxamed Nuur.
+            </p>
+
+            <p>📍 Hodan, Mogadishu, Somalia</p>
+
+            <p>📞 0167236652</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            POWER<span>GYM</span>
+        </div>
+
+        <p>
+            © 2026 Power Gym. All Rights Reserved.
+        </p>
+
+        <p>
+            Designed & Developed by
+            <strong>Cali Maxamed Nuur</strong>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

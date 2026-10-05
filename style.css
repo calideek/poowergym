@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.85)
+        ),
+        linear-gradient(135deg, #111, #350b0b);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-title {
+    color: #e63946;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.section-title span,
+.bmi-section span,
+.developer-section span {
+    color: #e63946;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 15px 25px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #b8202c;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #e63946;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 8%;
+}
+
+.dark-section {
+    background: #111;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #e63946;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+
+/* ABOUT */
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-box {
+    background: #151515;
+    padding: 35px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid #e63946;
+}
+
+.about-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.about-box h3 {
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+
+/* SERVICES */
+
+.services-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 40px;
+    background: #191919;
+    border: 1px solid #292929;
+}
+
+.service-number {
+    color: #e63946;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+
+/* PLANS */
+
+.plans-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.plan-card {
+    background: #151515;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+}
+
+.plan-card.popular {
+    border: 2px solid #e63946;
+}
+
+.popular-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e63946;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.plan-card h3 {
+    font-size: 25px;
+}
+
+.price {
+    font-size: 40px;
+    color: #e63946;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.price small {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.plan-card ul {
+    list-style: none;
+    text-align: left;
+    line-height: 2.5;
+    color: #ccc;
+}
+
+.plan-card button,
+.bmi-box button,
+form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #e63946;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #b8202c;
+}
+
+
+/* BMI */
+
+.bmi-section {
+    background: #151515;
+    padding: 90px 8%;
+}
+
+.bmi-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.bmi-container h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.bmi-container p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.bmi-box {
+    background: #0b0b0b;
+    padding: 35px;
+}
+
+.bmi-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #222;
+    color: white;
+    border: 1px solid #333;
+}
+
+#bmiResult {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* CONTACT */
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #171717;
+    color: white;
+    border: 1px solid #333;
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+#formMessage {
+    margin-top: 15px;
+    color: #e63946;
+}
+
+.contact-info {
+    background: #151515;
+    padding: 35px;
+}
+
+.contact-info h3 {
+    color: #e63946;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    color: #bbb;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+/* DEVELOPER */
+
+.developer-section {
+    padding: 80px 8%;
+    background: #111;
+    text-align: center;
+}
+
+.developer-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background: #151515;
+    border: 1px solid #333;
+}
+
+.developer-box h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.developer-box p {
+    color: #aaa;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+footer p {
+    color: #777;
+    margin: 15px;
+}
+
+footer strong {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        display: none;
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .about-container,
+    .services-container,
+    .plans-container,
+    .bmi-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}
